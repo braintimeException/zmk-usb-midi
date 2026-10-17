@@ -3,7 +3,9 @@
 
 menuconfig ZMK_USB_MIDI
     bool "ZMK USB-MIDI Class Support"
-    default y
+    depends on ZMK_USB
+    select USB_DEVICE_STACK
+    default n
     help
       Enables class-compliant USB-MIDI 1.0 support for ZMK on Zephyr's legacy USB device stack.
 
