@@ -1,0 +1,19 @@
+# Copyright (c) 2026 Anton Komissarov
+# SPDX-License-Identifier: MIT
+
+menuconfig ZMK_USB_MIDI
+    bool "ZMK USB-MIDI Class Support"
+    default y
+    help
+      Enables class-compliant USB-MIDI 1.0 support for ZMK on Zephyr's legacy USB device stack.
+
+if ZMK_USB_MIDI
+
+config ZMK_BEHAVIOR_MIDI_KEY_PRESS
+    bool "Enable MIDI key press behavior"
+    default y
+    depends on DT_HAS_ZMK_BEHAVIOR_MIDI_KEY_PRESS_ENABLED
+    help
+      Enables the &midi behavior binding.
+
+endif # ZMK_USB_MIDI

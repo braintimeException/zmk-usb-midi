@@ -1,0 +1,4 @@
+name: zmk-usb-midi
+build:
+  settings:
+    dts_root: .

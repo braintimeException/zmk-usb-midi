@@ -1,0 +1,7 @@
+# Build outputs
+build/
+.cache/
+*.pyc
+.DS_Store
+*.swp
+*~
